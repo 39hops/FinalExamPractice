@@ -1,0 +1,21 @@
+@startuml dao 
+class User {
+    + id: int 
+    + name: String 
+    + getId(): int 
+    + setId(id: int): void 
+    + getName(): String 
+    + setName(name: String): void 
+}
+interface UserDao {
+    + getUserById(): User 
+    + saveUser(): void 
+    + deleteUser(): void 
+}
+class UserDaoImpl implements UserDao {
+    + getUserById(): User 
+    + saveUser(): void 
+    + deleteUser(): void
+}
+UserDao -> User 
+
